@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <!-- Header/Navbar -->
+      <header>
+        <div class="logo">
+            <i class="fas fa-shopping-bag"></i>
+            <span>SimpleShop</span>
+        </div>
+        <div class="search">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="user-actions">
+            <a href="#" id="cart-btn">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Categories -->
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="electronics">Electronics</button>
+            <button class="category-btn" data-category="jewelery">Jewelry</button>
+            <button class="category-btn" data-category="men's clothing">Men's</button>
+            <button class="category-btn" data-category="women's clothing">Women's</button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products" id="products">
+            <!-- Products will load here -->
+            <div class="loading">Loading products...</div>
+        </div>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="empty">Your cart is empty</p>
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+        </div>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
