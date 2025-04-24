@@ -3,61 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Amazon Styled Shop</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-      <!-- Header/Navbar -->
-      <header>
+    <!-- Header -->
+    <header>
         <div class="logo">
-            <i class="fas fa-shopping-bag"></i>
-            <span>SimpleShop</span>
+            <i class="fas fa-shopping-cart"></i>
+            <span>AmazonShop</span>
         </div>
         <div class="search">
             <input type="text" id="search-input" placeholder="Search products...">
-            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <i class="fas fa-times cancel-icon" id="cancel-search"></i>
+            <button id="search-btn"><i class="fas fa-search">Search</i></button>
         </div>
         <div class="user-actions">
             <a href="#" id="cart-btn">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-count">0</span>
+                <i class="fas fa-shopping-cart">shopping-cart</i>
+                <span id="cart-count"> 0</span>
             </a>
         </div>
     </header>
+    
+    <!-- Categories -->
+    <section class="categories">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="electronics">Electronics</button>
+        <button class="category-btn" data-category="jewelery">Jewelry</button>
+        <button class="category-btn" data-category="men's clothing">Men's Clothing</button>
+        <button class="category-btn" data-category="women's clothing">Women's Clothing</button>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Categories -->
-        <div class="categories">
-            <button class="category-btn active" data-category="all">All</button>
-            <button class="category-btn" data-category="electronics">Electronics</button>
-            <button class="category-btn" data-category="jewelery">Jewelry</button>
-            <button class="category-btn" data-category="men's clothing">Men's</button>
-            <button class="category-btn" data-category="women's clothing">Women's</button>
-        </div>
-
-        <!-- Products Grid -->
-        <div class="products" id="products">
-            <!-- Products will load here -->
-            <div class="loading">Loading products...</div>
-        </div>
-    </main>
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="loading">Loading products...</div>
+    </section>
 
     <!-- Cart Sidebar -->
-    <div class="cart-sidebar" id="cart-sidebar">
+    <aside class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
             <h3>Your Cart</h3>
-            <button id="close-cart"><i class="fas fa-times"></i></button>
+            <button id="close-cart"><i class="fas fa-times">close-cart</i></button>
         </div>
-        <div class="cart-items" id="cart-items">
-            <p class="empty">Your cart is empty</p>
-        </div>
+        <div class="cart-items" id="cart-items"></div>
         <div class="cart-total">
             <span>Total:</span>
             <span id="cart-total">$0.00</span>
         </div>
         <button id="checkout-btn">Checkout</button>
+    </aside>
+
+    <!-- Back to Top -->
+<div class="back-to-top" onclick="scrollToTop()">Back to top</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-columns">
+        <div class="footer-col">
+            <h4>Get to Know Us</h4>
+            <a href="#">Careers</a>
+            <a href="#">Blog</a>
+            <a href="#">About Amazon</a>
+            <a href="#">Investor Relations</a>
+            <a href="#">Amazon Devices</a>
+            <a href="#">Amazon Science</a>
+        </div>
+        <div class="footer-col">
+            <h4>Make Money with Us</h4>
+            <a href="#">Sell on Amazon</a>
+            <a href="#">Sell on Amazon Business</a>
+            <a href="#">Become an Affiliate</a>
+            <a href="#">Advertise Your Products</a>
+            <a href="#">Self-Publish with Us</a>
+        </div>
+        <div class="footer-col">
+            <h4>Amazon Payment Products</h4>
+            <a href="#">Amazon Business Card</a>
+            <a href="#">Shop with Points</a>
+            <a href="#">Reload Your Balance</a>
+            <a href="#">Amazon Currency Converter</a>
+        </div>
+        <div class="footer-col">
+            <h4>Let Us Help You</h4>
+            <a href="#">Your Account</a>
+            <a href="#">Your Orders</a>
+            <a href="#">Shipping Rates</a>
+            <a href="#">Returns & Replacements</a>
+            <a href="#">Help</a>
+        </div>
     </div>
+    <div class="footer-bottom">
+        <img src="amazon_logo.png" alt="Amazon Logo" class="footer-logo">
+        <div class="footer-settings">
+            <button>🌐 English</button>
+            <button>$ USD - U.S. Dollar</button>
+            <button>🇺🇸 United States</button>
+        </div>
+    </div>
+</footer>
 
 
     <script src="app.js"></script>
